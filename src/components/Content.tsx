@@ -2,8 +2,16 @@ import { Box, Fab, Stack } from "@mui/material";
 import Homepage from "../page/Homepage";
 import Sidebar from "./Sidebar";
 import AddIcon from "@mui/icons-material/Add";
+import ModalComponent from "./ModalComponent";
+import { useState } from "react";
 
 function Content() {
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const handleClose = () => {
+    setModalOpen(false);
+  };
+
   return (
     <Box
       maxWidth="xl"
@@ -28,10 +36,15 @@ function Content() {
           p: { xs: 0, md: 5 },
         }}
       >
-        <Fab color="primary" aria-label="add">
+        <Fab
+          color="primary"
+          aria-label="add"
+          onClick={() => setModalOpen(true)}
+        >
           <AddIcon />
         </Fab>
       </Box>
+      <ModalComponent open={modalOpen} handleClose={handleClose} />
     </Box>
   );
 }
