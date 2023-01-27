@@ -8,6 +8,8 @@ import {
   Typography,
   Card as CardItem,
   Checkbox,
+  Tooltip,
+  Button,
 } from "@mui/material";
 
 import MoreVertIcon from "@mui/icons-material/MoreVert";
@@ -60,8 +62,10 @@ function Card() {
         </Stack>
 
         <Stack direction={"row"} alignItems="center">
-          <ChatBubbleOutlineIcon sx={{ mr: 2 }} />
-          <Typography>Comment</Typography>
+          <Button sx={{ color: "text.secondary" }}>
+            <ChatBubbleOutlineIcon sx={{ mr: 2 }} />
+            <Typography>Comment</Typography>
+          </Button>
         </Stack>
       </CardActions>
     </CardItem>

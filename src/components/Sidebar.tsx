@@ -79,6 +79,7 @@ function Sidebar() {
                 <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
               </ListItemAvatar>
               <ListItemText
+                sx={{ color: "text.primary" }}
                 primary="Brunch this weekend?"
                 secondary={
                   <>
@@ -102,6 +103,7 @@ function Sidebar() {
               </ListItemAvatar>
               <ListItemText
                 primary="Summer BBQ"
+                sx={{ color: "text.primary" }}
                 secondary={
                   <>
                     <Typography

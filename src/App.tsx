@@ -11,6 +11,9 @@ function App() {
     palette: {
       mode: theme as any,
     },
+    typography: {
+      fontFamily: ["Inter", "sans-serif"].join(","),
+    },
   });
 
   return (
